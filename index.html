@@ -5,27 +5,51 @@
 <title>Preview</title>
 <style>
 body{
-  background:#0b132b;
+  background: linear-gradient(135deg,#0b132b,#1c2541);
   color:white;
-  font-family:Arial, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   display:flex;
   justify-content:center;
   align-items:center;
   height:100vh;
   text-align:center;
 }
-h1{font-size:2.5em;}
+h1{
+  font-size:2.4em;
+  margin-bottom:20px;
+}
+button{
+  background:#ff4d6d;
+  border:none;
+  padding:12px 24px;
+  color:white;
+  font-size:16px;
+  border-radius:30px;
+  cursor:pointer;
+}
 </style>
 </head>
 <body>
 
 <div>
-  <h1>I Love youuuuuu<br>Aswin Raghavendraa RV!!! ❤️</h1>
+  <h1>
+    I Love youuuuuu<br>
+    Aswin Raghavendraa RV!!! ❤️
+  </h1>
 
-  <audio autoplay loop>
-    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-  </audio>
+  <button onclick="playMusic()">Tap to Play 🎵</button>
 </div>
+
+<audio id="bgm" loop preload="auto">
+  <source src="adhento-bgm.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function playMusic(){
+  const audio = document.getElementById("bgm");
+  audio.play();
+}
+</script>
 
 </body>
 </html>
